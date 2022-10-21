@@ -3,11 +3,15 @@
 
 
 type Link {
-  description: Int!
+  description: String!
   id: Int!
-  url: Int!
+  url: String!
+}
+
+type Mutation {
+  post(description: String!, url: String!): Link!
 }
 
 type Query {
-  ok: Boolean!
+  feed: [Link!]!
 }
